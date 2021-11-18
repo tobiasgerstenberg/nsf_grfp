@@ -1,0 +1,60 @@
+\documentclass[11pt]{article} % 11pt font
+
+% Conform to NSF formatting requirements
+% see: https://www.nsf.gov/pubs/2020/nsf20587/nsf20587.pdf
+% --------------------------------------
+% 1in margins
+\usepackage[margin=1in]{geometry}
+
+% use times new roman for main text
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+% use cambria for math
+\usepackage{unicode-math}
+\setmathfont{[Cambria-Math.ttf]}
+% single line spacing
+\usepackage{setspace}
+\singlespacing
+
+% To fit more into the proposal, 
+% let's make the section titles tiny and compact
+\usepackage[tiny,compact]{titlesec}
+\titleformat{\section}[runin]{\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[runin]{\bfseries}{\thesubsection}{1em}{}
+
+% and let's compress the references too
+\usepackage[numbers]{natbib}
+\renewcommand{\refname}{References \vspace{-0.6\baselineskip}} % no extra vert. space after title
+\setlength{\bibsep}{0pt} % no extra vert. space between bib items
+
+% BEGINNING OF THE DOCUMENT
+\begin{document}
+
+\begin{center}
+\large{\bf Title of the project}
+\end{center}
+
+\section*{Outline}
+
+The outlines goes here.
+
+\section*{Motivation and Intellectual Merit}
+
+Here is a citation to one paper \cite{paper1}. Here one to another one \cite{paper2}, and here is one to both papers \cite{paper1,paper2}.
+
+\section*{Research Plan}
+
+Here is an equation: 
+\begin{equation}
+\label{eq:pythagoras}
+a^2 + b^2 = c^2
+\end{equation}
+See Equation~\ref{eq:pythagoras}. 
+
+\section*{Broader Impacts}
+
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}
